@@ -2,9 +2,9 @@
   "name": "choosealicense",
   "version": "0.1.2",
   "description": "CLI tool to choose a license for your project.",
-  "main": "index.js",
+  "main": "bin/choosealicense.js",
   "bin": {
-    "choosealicense": "index.js"
+    "choosealicense": "bin/choosealicense.js"
   },
   "preferGlobal": "true",
   "scripts": {
