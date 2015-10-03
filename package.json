@@ -1,6 +1,6 @@
 {
   "name": "choosealicense",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "CLI tool to choose a license for your project.",
   "main": "bin/choosealicense.js",
   "bin": {
