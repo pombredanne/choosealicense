@@ -1,0 +1,28 @@
+{
+  "name": "choosealicense",
+  "version": "1.0.0",
+  "description": "CLI tool to choose a license for your project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fmoliveira/choosealicense.git"
+  },
+  "keywords": [
+    "choose",
+    "license",
+    "spdx",
+    "gpl",
+    "mit",
+    "apache",
+    "bsd"
+  ],
+  "author": "Filipe Oliveira <contato@fmoliveira.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fmoliveira/choosealicense/issues"
+  },
+  "homepage": "https://github.com/fmoliveira/choosealicense#readme"
+}
