@@ -1,8 +1,11 @@
 {
   "name": "choosealicense",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "CLI tool to choose a license for your project.",
   "main": "index.js",
+  "bin": {
+    "choosealicense": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/fmoliveira/choosealicense/issues"
   },
-  "homepage": "https://github.com/fmoliveira/choosealicense#readme"
+  "homepage": "https://github.com/fmoliveira/choosealicense#readme",
+  "dependencies": {
+    "osmosis": "0.0.8"
+  }
 }
