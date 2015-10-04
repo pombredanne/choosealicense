@@ -14,3 +14,14 @@ test('invalid license', function (t) {
 		t.end();
 	})
 });
+
+test('mit license', function (t) {
+	get('mit', function (err, text) {
+		if (text.indexOf('The MIT License (MIT)') != -1) {
+			t.pass('MIT license downloaded successfully.');
+		} else {
+			t.fail('Failed to download MIT license or license text is not correct!');
+		}
+		t.end();
+	});
+});
