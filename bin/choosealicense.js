@@ -1,11 +1,24 @@
 #!/usr/bin/env node
 
 var package = require('../package'),
-	get = require('../lib/get');
+	get = require('../lib/get'),
+	list = require('../lib/list');
 
-/* An argument is mandatory. TO DO: print a summary of license names. */
+/* An argument is mandatory. */
 if (process.argv.length == 2) {
-	console.log('You must provide an argument with the license name!')
+	list(function (err, list) {
+		if (err) {
+			console.error(err);
+			return;
+		}
+
+		console.log('Please provide an argument with the desired license ID.');
+		console.log('Listing available licenses:');
+
+		list.forEach(function (i) {
+			console.log(`  * ${i.id}: ${i.name}`);
+		});
+	});
 	return;
 }
 
