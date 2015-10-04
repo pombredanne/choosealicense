@@ -3,14 +3,14 @@ var test = require('tape'),
 
 test('no arguments', function (t) {
 	get(null, function (err) {
-		t.notEqual(err, null, 'No error message for program without arguments!');
+		t.notEqual(err, null, 'Throw an error when no arguments supplied.');
 		t.end();
 	});
 });
 
 test('invalid license', function (t) {
 	get('lolcats', function (err) {
-		t.notEqual(err, null, 'Something went wrong with an invalid license name!');
+		t.notEqual(err, null, 'Throw an error for invalid license name.');
 		t.end();
 	})
 });
