@@ -13,3 +13,23 @@ test('list licenses', function (t) {
 		t.end();
 	});
 });
+
+test('list should contain MIT license', function (t) {
+	list(function (err, list) {
+		var found = false;
+
+		list.forEach(function (item) {
+			if (item.id === 'mit') {
+				t.pass('List contain MIT license.');
+				t.equal(item.name, 'MIT License', 'License name is correct.');
+				found = true;
+			}
+		});
+
+		if (!found) {
+			t.fail('List does not contain MIT license.');
+		}
+
+		t.end();
+	});
+});
