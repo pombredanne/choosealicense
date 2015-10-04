@@ -17,11 +17,19 @@ test('invalid license', function (t) {
 
 test('mit license', function (t) {
 	get('mit', function (err, text) {
-		if (text.indexOf('The MIT License (MIT)') != -1) {
-			t.pass('MIT license downloaded successfully.');
-		} else {
-			t.fail('Failed to download MIT license or license text is not correct!');
+		t.notEqual(text, undefined, 'License text must be defined.');
+		t.notEqual(text, null, 'License text cannot be null.');
+
+		if (text) {
+			t.notEqual(text.length, 0, 'License text length must not be zero.');
+
+			if (text.indexOf('The MIT License (MIT)') != -1) {
+				t.pass('MIT license downloaded successfully.');
+			} else {
+				t.fail('Failed to download MIT license or license text is not correct!');
+			}
 		}
+
 		t.end();
 	});
 });
