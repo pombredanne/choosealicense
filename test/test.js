@@ -7,3 +7,10 @@ test('no arguments', function (t) {
 		t.end();
 	});
 });
+
+test('invalid license', function (t) {
+	get('lolcats', function (err) {
+		t.notEqual(err, null, 'Something went wrong with an invalid license name!');
+		t.end();
+	})
+});
