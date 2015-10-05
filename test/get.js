@@ -24,7 +24,7 @@ test('mit license', function (t) {
 			t.notEqual(text.length, 0, 'License text length must not be zero.');
 
 			if (text.indexOf('The MIT License (MIT)') != -1) {
-				t.pass('MIT license downloaded successfully.');
+				t.pass('MIT license text is correct.');
 			} else {
 				t.fail('Failed to download MIT license or license text is not correct!');
 			}
